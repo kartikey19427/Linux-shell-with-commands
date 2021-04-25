@@ -1,0 +1,10 @@
+Usage= rm [OPTION] [FILE]
+removes the written file.
+
+command options-
+
+-v   (verbose) shows what is being removed.
+
+--help displays this help.
+
+rm is not capable of removing directories.

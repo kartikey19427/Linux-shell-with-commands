@@ -1,0 +1,9 @@
+Usage: history [OPTION]
+    displays all the commands written in the shell's lifetime.
+    
+    Command Options:
+      -c	Clears all the history entries.
+
+      --help Displays this help.
+    
+    By default, History displays all the commands written in order.

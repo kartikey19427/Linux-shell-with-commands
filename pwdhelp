@@ -1,0 +1,10 @@
+Usage: pwd [OPTION]
+    Prints the name of the current working directory.
+    
+    Command Options:
+      -L	Print the value of $PWD if it names the 
+      		current working directory.
+
+      --help Displays this help.
+    
+    By default, 'pwd' behaves as if '-L' were specified.

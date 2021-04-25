@@ -1,0 +1,115 @@
+Documentation
+Assignment 1.2
+
+Name: Kartikey Gupta
+Roll Number: 2019427
+Branch: CSB
+
+The shell handles 10 commands-5 internal and 5 external.
+The internal commands are included in the same file as functions.
+The external commands are in different files which are executed using fork.
+The internal commands include: 
+1) echo:
+By default, prints user input as output after echo command.
+ Command options:
+-e: if the entered string contains any \n characters, the shell replaces it with a newline and the string enters the next line.
+*: Prints all the subdirectories and files in the current directory.
+2) cd:
+By default, change the current shell working directory.
+Command options:
+--help:displays text on the shell containing the information about cd command and its options.
+if '..' is followed after cd, the directory changes to the immediate parent directory of current directory.
+
+3) pwd:
+By default, displays the current shell working directory.
+Command options:
+-L    Print the value of $PWD if it names the current working directory.
+--help:displays text on the shell containing the information about pwd command and its options.
+By default, 'pwd' behaves as if '-L' were specified.
+4) history:
+By default, displays all the commands written in the shell.
+Command options:
+-c    Clears all the history entries.
+--help:displays text on the shell containing the information about history command and its options.
+By default, History displays all the commands written in order.
+
+
+5) exit:
+Exits the command shell with a return value.
+
+The external commands include: 
+1) date:
+By default, displays the current system date and time.
+Command options:
+-u displays current system time converted to universal GMT time. 
+-r Shows last modified time of the file entered by the user.
+
+
+2) mkdir
+By default, creates a new subdirectory in the current working directory.
+Command options:
+-p makes parent directories as needed.(makes directories/subdirectories/sub subdirectories) 
+-v prints a message for each created directory.
+
+
+3) ls:
+By default list all sub directories and files in the current working directory.
+Command options:
+-a: display hidden files and directories.
+-1: lists one file or folder per line.
+
+4) rm:     
+By default, remove the file entered by the user.
+Command options:
+-v   (verbose) shows what is being removed.
+--help:displays text on the shell containing the information about rm command and its options.
+rm is not capable of removing directories.
+
+
+5) cat:
+By default, reads the file entered by the user and displays its content on the terminal.
+Command options:
+-n:numbers all output lines.
+-E: displays $ at the end of each line.
+
+
+
+The program takes a line input from the user and when ‘enter’ is pressed, the command input is recorded and processed to give output.
+The external commands work on the fork mechanism as explained in previous assignment.
+
+
+
+//Errors handled:
+Any blank input from user, will result in going to the next line.
+Echo: if command option entered isn't one of the given 2 commands, the shell will show invalid command option.
+
+Cd: if the entered directory does not exist, it shows an error message.
+If command option entered isn’t one of given 2 commands, the shell will show invalid command option.
+
+History:  if command option entered isn't one of the given 2 commands, the shell will show invalid command option.
+
+Mkdir: if folder already exists in directory, it will show an error message declaring that.
+If the help file is erased, it will show an error message declaring that.
+
+Cat: if file does not exist, the shell will show an error message pertaining to it.
+If the help file is erased, it will show an error message declaring that.
+
+Ls: if for some reason permission is denied to directory or it cannot open current directory, it will show an error message.
+Number of spaces before ls command or between ls and command option doesn't matter. It will still show correct output.
+
+Pwd: word written after pwd doesn’t matter. It will still show proper output.
+
+Date: Number of spaces before date command or between date and command option doesn't matter. It will still show correct output.
+
+Test Case:
+echo hello world  //output: hello world
+history     // output: 1 ^echo hello world
+history --help //output displays help
+mkdir somedirectory   //output: (creates directory)
+ls                   //output: all files and subdirectories
+echo -n  hello world   //output: “invalid command option”
+
+
+
+
+

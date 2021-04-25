@@ -1,0 +1,10 @@
+Usage: cd [OPTION] [DIR]
+changes the current shell working directory.
+
+command options-
+
+
+--help displays this help.
+
+if '..' is followed after cd, the directory changes to
+the immediate parent directory of current directory.
